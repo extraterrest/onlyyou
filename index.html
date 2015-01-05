@@ -9,7 +9,7 @@ RFP Generating System
 <br>
 <br>
 
-<form action="rfpgen" target="_blank">
+<form action="rfpgen" target="_blank" id="list">
 Platform:<br>
 <table >
   <tr>
@@ -157,8 +157,19 @@ Module:
 </tr>
 <br>
 <br>
-<input type="submit" value="Submit">
+
+<input type="button" onclick="submitForm('rfpgen')" value="生成招标指标" />
+<input type="button" onclick="submitForm('deviationgen')" value="生成投标偏离表" />
+
 
 </form>
+
+<script type="text/javascript">
+    function submitForm(action)
+    {
+        document.getElementById('list').action = action;
+        document.getElementById('list').submit();
+    }
+</script>
 </body>
 </html>
