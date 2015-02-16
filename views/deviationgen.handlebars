@@ -1,0 +1,40 @@
+<h1 class="title">F5 产品招标偏离表</h1>
+
+<h4 class="title"> 硬件平台: {{hardwareModule}} 软件模块: {{softwareModule}} </h4>
+
+<div class="row">
+    <div class="col-md-12">
+<table class="dev table center-block " id="devtable">
+    <tr><th class="col1">招标规格</th><th class="col2">投标规格</th><th class="col3">偏离</th><th class="col4"> 说明   </th></tr>
+    {{#each tablePerformance}}
+        <tr><td> {{item}}  {{content}} </td><td> {{response}} </td><td> {{deviation}} </td><td>  </td></tr>
+    {{/each}}
+    {{#each tableSystem}}
+        <tr><td> {{item}}  {{content}} </td><td> {{response}} </td><td> {{deviation}} </td> <td>  </td> </tr>
+    {{/each}}
+    {{#each tableADC}}
+        <tr><td> {{item}}  {{content}} </td><td> {{response}} </td><td> {{deviation}} </td> <td>  </td> </tr>
+    {{/each}}
+    {{#each tableSecurity}}
+        <tr><td> {{item}}  {{content}} </td><td> {{response}} </td><td> {{deviation}} </td> <td>  </td> </tr>
+    {{/each}}
+    {{#each tableAdmin}}
+        <tr><td> {{item}}  {{content}} </td><td> {{response}} </td><td> {{deviation}} </td> <td>  </td> </tr>
+    {{/each}}
+    {{#each tableService}}
+        <tr><td> {{item}} {{content}} </td><td> {{response}} </td><td> {{deviation}} </td> <td>  </td> </tr>
+    {{/each}}
+
+</table>
+        </div>
+    </div>
+
+    <p class="note"> 请根据项目实际情况对参数进行校验和微调。
+
+<div class="row">
+    <div class="col-md-5 col-sm-2 col-xs-2"></div>
+    <div class="col-md-2 col-sm-8 col-xs-8">
+        <a class="btn btn-primary center-block" download="技术偏离表.xls" href="#" onclick="return ExcellentExport.excel(this, 'devtable', 'F5');">导出为Excel文件</a>
+    </div>
+    <div class="col-md-5 col-sm-2 col-xs-2"></div>
+</div>

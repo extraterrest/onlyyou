@@ -1,0 +1,123 @@
+<div class="container">
+    <form role="form" id="myForm" method="post" target="_blank">
+
+        <div class="row" id="hardwareSelection">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12">
+                    <label class="form-group" for="platform1">Select Hardware Series</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <select class="form-control" id="platform1">
+                            <option selected> VIPRION </option>
+                            <option> 2000/4000 Series </option>
+                            <option> 5000/7000 Series </option>
+                            <option> 10000 Series </option>
+                            <option> Old Series </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12">
+                    <label class="form-group" for="platform2" id="lablePlatformChassis">Select Chassis</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    <select class="form-control" id="platform2" name="platform">
+                        <option value="VPR2200"> VIPRION 2200 </option>
+                        <option selected> VIPRION 2400 </option>
+                        <option > VIPRION 4480 </option>
+                        <option > VIPRION 4800 </option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12" id="partBlade">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="form-group" for="platform3">Select Blade</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <select class="form-control"  id="platform3" name="blade">
+                            <option> B2100 </option>
+                            <option selected> B2150 </option>
+                            <option> B2250 </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <label class="form-group">Select Software Module</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-sm-12">
+
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleLTM" name="module" value="ltm" checked>LTM</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleGTM" name="module" value="dns" class="checkboxModule nonLCModule">DNS</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleAFM" name="module" value="afm" class="checkboxModule nonLCModule">AFM</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleAPM" name="module" value="apm" class="checkboxModule nonLCModule">APM</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleASM" name="module" value="asm" class="checkboxModule nonLCModule">ASM</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleAAM" name="module" value="aam" class="checkboxModule nonLCModule">AAM</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="modulePEM" name="module" value="pem" disabled class="checkboxModule">PEM</label>
+                </div>
+                <div class="checkbox-inline">
+                    <label><input type="checkbox" id="moduleLC" name="module" value="lc" class="checkboxModule LCModule">LC</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <label class="form-group">Quick Select&nbsp&nbsp&nbsp</label>
+                <div class="radio-inline">
+                    <label><input type="radio" name="quickSelection" class="quickSelection" value="good" >Good</label>
+                </div>
+                <div class="radio-inline">
+                    <label><input type="radio" name="quickSelection" class="quickSelection" value="better" >Better</label>
+                </div>
+                <div class="radio-inline">
+                    <label><input type="radio" name="quickSelection" class="quickSelection" value="best" >Best</label>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-6">
+            <button class="btn btn-primary" id="buttonForrfpgen">生成招标参数</button>
+            <button class="btn btn-primary" id="buttonFordeviationgen">生成偏离表</button>
+        </div>
+        <div class="col-md-6"></div>
+
+    </form>
+
+</div>

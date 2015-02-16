@@ -1,0 +1,47 @@
+<h1 class="title">F5 产品招标参数</h1>
+
+<h4 class="title"> 硬件平台: {{hardwareModule}} 软件模块: {{softwareModule}} </h4>
+<div class="container">
+
+<table class="rfp table center-block" id="rfptable">
+    <tr><th class="col1">指标项</th><th class="col2">要求</th><th class="col3">备注</th></tr>
+    <tr><td colspan="3">性能参数</td></tr>
+
+    {{#each tablePerformance}}
+        <tr><td>  {{item}} </td><td> {{content}} </td><td> {{comment}} </td></tr>
+    {{/each}}
+
+    <tr><td colspan="3">系统要求</td></tr>
+    {{#each tableSystem}}
+        <tr><td>  {{item}} </td><td> {{content}} </td><td> {{comment}} </td>  </tr>
+    {{/each}}
+
+    <tr><td colspan="3">应用交付要求</td></tr>
+    {{#each tableADC}}
+        <tr><td>  {{item}} </td><td> {{content}} </td><td> {{comment}} </td> </tr>
+    {{/each}}
+
+    <tr><td colspan="3">安全要求</td></tr>
+{{#each tableSecurity}} 
+    <tr><td>  {{item}} </td><td> {{content}} </td><td> {{comment}} </td> </tr>
+{{/each}}
+    <tr><td colspan="3">管理要求</td></tr>
+{{#each tableAdmin}} 
+    <tr><td>  {{item}} </td><td> {{content}} </td><td> {{comment}} </td> </tr>
+{{/each}}
+    <tr><td colspan="3">服务要求</td></tr>
+{{#each tableService}} 
+    <tr><td>  {{item}} </td><td> {{content}} </td><td> {{comment}} </td> </tr>
+{{/each}}
+</table>
+</div>
+    <p class="note"> 请根据项目实际情况对参数进行校验和微调。</p>
+
+<div class="row">
+    <div class="col-md-5 col-sm-2 col-xs-2"></div>
+    <div class="col-md-2 col-sm-8 col-xs-8">
+        <a class="btn btn-primary center-block" download="指标参数.xls" href="#" onclick="return ExcellentExport.excel(this, 'rfptable', 'F5');">导出为Excel文件</a>
+    </div>
+    <div class="col-md-5 col-sm-2 col-xs-2"></div>
+</div>
+
